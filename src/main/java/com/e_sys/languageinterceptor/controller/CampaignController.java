@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.*;
 public class CampaignController {
     private final CampaignService service;
 
-    @GetMapping("/gett/{id}")
-    public ResponseEntity<?> getLang(@RequestHeader("lang") String lang, @PathVariable Long id) {
+    @GetMapping("/get/{id}")
+    public ResponseEntity<?> getLang(@RequestHeader("language") String lang, @PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK)
-                .body(service.getByID(lang, id));
+                .body(service.getByID(id));
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<?> getLang(@RequestHeader("lang") String lang, @PathVariable Long id, HttpServletRequest request) {
-        CampaignDto campaignDto = service.getByID(lang, id);
+    public ResponseEntity<?> getLang(@RequestHeader("language") String lang, @PathVariable Long id, HttpServletRequest request) {
+        CampaignDto campaignDto = service.getByID(id);
         request.setAttribute("responseBody", campaignDto);
         return ResponseEntity.status(HttpStatus.OK).body(campaignDto);
     }

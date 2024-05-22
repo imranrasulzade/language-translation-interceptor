@@ -6,9 +6,7 @@ import lombok.Data;
 @Data
 public class TranslationDto {
     private Long id;
-    private String az;
-    private String en;
-    private String ru;
+    private String text;
     private String parentTable;
     private String parentId;
     private Boolean status;

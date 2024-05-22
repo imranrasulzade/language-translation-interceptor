@@ -13,7 +13,7 @@ public class CampaignService {
     private final CampaignRepository campaignRepository;
     private final ModelMapper modelMapper;
 
-    public CampaignDto getByID(String lang, Long id) {
+    public CampaignDto getByID(Long id) {
         Campaign campaign = campaignRepository.findById(id).orElseThrow(() -> new RuntimeException("Entity not found"));
         return modelMapper.map(campaign, CampaignDto.class);
     }
