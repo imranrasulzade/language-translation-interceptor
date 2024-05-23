@@ -19,14 +19,14 @@ public class ModelMapperConfig {
                 using(context -> {
                     Translation source = (Translation) context.getSource();
                     String language = LanguageInterceptor.getCurrentLanguage();
-                    if ("en".equals(language)) {
+                    if ("en".equalsIgnoreCase(language)) {
                         return source.getEn();
-                    } else if ("ru".equals(language)) {
+                    } else if ("ru".equalsIgnoreCase(language)) {
                         return source.getRu();
-                    } else if ("az".equals(language)) {
+                    } else if ("az".equalsIgnoreCase(language)) {
                         return source.getAz();
                     } else {
-                        return null;
+                        return source.getAz();
                     }
                 }).map(source, destination.getText());
             }
