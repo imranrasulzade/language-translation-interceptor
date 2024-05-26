@@ -8,5 +8,6 @@ public class CampaignDto {
     private TranslationDto header;
     private TranslationDto contentHeader;
     private TranslationDto content;
+    private CampaignTypeDto campaignType;
 
 }

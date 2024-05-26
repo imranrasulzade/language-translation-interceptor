@@ -2,24 +2,16 @@ package com.e_sys.languageinterceptor.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @Table
-@NoArgsConstructor
-public class Campaign {
-
+public class About {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @OneToOne(cascade = CascadeType.ALL)
-    private Translation header;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Translation contentHeader;
+    private Translation title;
     @OneToOne(cascade = CascadeType.ALL)
     private Translation content;
-
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private CampaignType campaignType;
 }
