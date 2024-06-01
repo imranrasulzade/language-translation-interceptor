@@ -1,15 +1,3 @@
 spring:
-  application:
-    name: language-interceptor
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/language_interceptor_db
-    username: root
-    password: 12345678
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
-    open-in-view: false
+  profiles:
+    default: prod
