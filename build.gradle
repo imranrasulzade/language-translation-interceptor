@@ -39,6 +39,8 @@ dependencies {
     implementation 'org.json:json:20230227'
     testImplementation 'junit:junit:4.13.2'
 
+    runtimeOnly group: 'org.aspectj', name: 'aspectjrt', version: '1.9.22'
+
 }
 
 tasks.named('test') {
