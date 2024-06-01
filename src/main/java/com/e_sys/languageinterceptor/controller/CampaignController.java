@@ -16,7 +16,7 @@ public class CampaignController {
     private final CampaignService service;
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getLang(@PathVariable Long id) {
+    public ResponseEntity<?> getByID(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(service.getByID(id));
     }
