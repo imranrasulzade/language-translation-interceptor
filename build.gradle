@@ -36,10 +36,15 @@ dependencies {
     implementation 'org.modelmapper:modelmapper:3.1.1'
     implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.1.0'
 
-    implementation 'org.json:json:20230227'
-    testImplementation 'junit:junit:4.13.2'
+//    implementation 'org.json:json:20230227'
+//    testImplementation 'junit:junit:4.13.2'
 
     runtimeOnly group: 'org.aspectj', name: 'aspectjrt', version: '1.9.22'
+
+    // For Jasypt encoder
+    // https://mvnrepository.com/artifact/com.github.ulisesbocchio/jasypt-spring-boot-starter
+    implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.5'
+
 
 }
 
