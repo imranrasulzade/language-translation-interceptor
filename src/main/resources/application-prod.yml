@@ -5,7 +5,10 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/language_interceptor_db
     username: root
-    password: 12345678
+    #password encrypted by https://www.devglan.com/online-tools/jasypt-online-encryption-decryption
+    # ENC(your_encrypted_password)
+    password: ENC(uVzJnHFkBV5UTFqXZWuV8FuvbyLbhBdg)
+#    password: 12345678
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
@@ -13,3 +16,9 @@ spring:
       ddl-auto: update
     show-sql: false
     open-in-view: false
+
+
+#for jasypt secret key -> declare your secret key
+jasypt:
+  encryptor:
+    password: my-secret-key
