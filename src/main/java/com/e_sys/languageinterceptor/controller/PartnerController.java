@@ -20,6 +20,11 @@ public class PartnerController {
         return ResponseEntity.ok(service.getAllPartners());
     }
 
+    @GetMapping("mapstruct")
+    public ResponseEntity<?> getAllWithMapStruct(){
+        return ResponseEntity.ok(service.getAllWithMapStruct());
+    }
+
     @PostMapping
     public void create(@RequestBody @Valid PartnerPayload partnerPayload){
         service.create(partnerPayload);
